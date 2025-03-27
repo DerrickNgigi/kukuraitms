@@ -80,7 +80,7 @@ with col5:
     df_graph = pd.DataFrame(data).set_index("Time Period")
 
     # Display the line chart
-st.line_chart(df_graph)
+    st.line_chart(df_graph)
 
 # Footer
 st.markdown("---")
