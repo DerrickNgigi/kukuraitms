@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
+
 
 # Title of the app
 st.title("KURA CHECKPOINT SYSTEM")
@@ -62,7 +62,8 @@ with col4:
 with col5:
     # Graph of Vehicle Count Over Time
     st.subheader("Vehicle Count Over Time")
-
+    # Graph of Vehicle Count Over Time
+    
     # Simulate data for the graph
     vehicle_types = ["Car", "Bus", "Lorry", "Motorbike", "Truck"]
     time_periods = ["Morning", "Afternoon", "Evening", "Night"]
@@ -74,17 +75,12 @@ with col5:
         "Motorbike": [8, 12, 10, 5],
         "Truck": [3, 6, 4, 2]
     }
+
+    # Convert the data into a format suitable for st.line_chart()
     df_graph = pd.DataFrame(data).set_index("Time Period")
 
-    # Plot the graph
-    plt.figure(figsize=(10, 6))
-    for vehicle in vehicle_types:
-        plt.plot(df_graph.index, df_graph[vehicle], label=vehicle)
-    plt.xlabel("Time Period")
-    plt.ylabel("Vehicle Count")
-    plt.title("Vehicle Count Over Time")
-    plt.legend()
-    st.pyplot(plt.gcf())
+    # Display the line chart
+st.line_chart(df_graph)
 
 # Footer
 st.markdown("---")
