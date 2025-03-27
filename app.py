@@ -23,8 +23,8 @@ col1, col2 = st.columns([4, 2])
 
 with col1:
     # Video Stream Section
-    video_file = open("motion20.mp4", "rb")
-    video_bytes = video_file.read()
+    # video_file = open("motion20.mp4", "rb")
+    # video_bytes = video_file.read()
     st.video("https://youtu.be/WVSYqut7pLs", autoplay=True, loop=True)
 
 with col2:
@@ -63,7 +63,7 @@ with col5:
     # Graph of Vehicle Count Over Time
     st.subheader("Vehicle Count Over Time")
     # Graph of Vehicle Count Over Time
-    
+
     # Simulate data for the graph
     vehicle_types = ["Car", "Bus", "Lorry", "Motorbike", "Truck"]
     time_periods = ["Morning", "Afternoon", "Evening", "Night"]
