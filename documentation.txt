@@ -1,0 +1,5 @@
+#start run_server
+# 1. pipenv install
+# 2. pipenv shell
+# 3. export OPENBLAS_CORETYPE=ARMV8
+# 4. python app.py
